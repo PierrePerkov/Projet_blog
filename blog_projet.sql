@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 19 déc. 2019 à 11:34
+-- Généré le :  jeu. 19 déc. 2019 à 13:56
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -37,6 +37,29 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   `date_comm` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `inscription`
+--
+
+DROP TABLE IF EXISTS `inscription`;
+CREATE TABLE IF NOT EXISTS `inscription` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(255) DEFAULT NULL,
+  `motdepasse` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `date_naissance` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `inscription`
+--
+
+INSERT INTO `inscription` (`id`, `pseudo`, `motdepasse`, `email`, `date_naissance`) VALUES
+(1, 'pierre', '$2y$10$JgspeIAzNqft1vu51ZCLOOrWQ13tH1wMdeNZ/Qx0iYjeyp7ExjiAi', 'pierreperkovpp@gmail.com', '2019-12-24');
 
 -- --------------------------------------------------------
 
