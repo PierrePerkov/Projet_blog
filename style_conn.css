@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('polices/menu/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('polices/menu/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'amaticbold';
+    src: url('polices/titre_principal/amatic-bold-webfont.woff2') format('woff2'),
+         url('polices/titre_principal/amatic-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Page d'accueil */
+.menu
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px; font-family:'kaushan_scriptregular' ;
+    background-color: honeydew;
+    margin-bottom: 0px;
+    height: 65px;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+}
+nav
+{
+  margin-left:10px;
+    
+}
+nav ul
+{
+    display: flex;
+    
+    
+}
+
+nav li
+{
+    list-style-type: none;
+    padding-left: 100px;
+}
+nav a
+{
+    color: black;
+    text-decoration: none;
+}
+nav :hover
+{
+    color: chocolate;
+    font-style: unset;
+}
+.connection
+{
+    display: flex;
+    position: absolute;top: 15px;right: 100px;
+    margin-right: 20px;
+
+}
+.connection a
+{
+    margin-right: 20px;
+}
+
+.connection :hover
+{
+    color: chocolate;
+}
+
+.connection button
+{
+border-radius: 50%;
+height: 40px;
+width: 40px;
+background-image: url('images/bouton_deco.png');
+background-repeat: no-repeat;
+background-position: center;
+
+}
+.connection :hover
+{
+    height: 42px;
+    width: 42px;
+}
+.titre_logo
+{
+    display: flex;
+    justify-content: center;
+    border-bottom: black ridge 2px;
+    height: 150px;
+    align-items: center;
+    background-color: hsl(202, 65%, 84%);
+    border-radius: 15px;
+}
+.titre_logo img
+{
+    width: 150px;
+}
+.titre_logo h1
+{
+font-family: 'amaticbold';
+font-size: 80px;
+padding-left: 40px;
+}
+
