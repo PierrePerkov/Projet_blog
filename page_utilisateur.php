@@ -82,7 +82,7 @@ session_start();
                         }
                         else
                         {
-                            echo 'erreur durant l\'importation';
+                            echo '<p class="msg">Erreur durant l\'importation du fichier.</p>';
                         }
                     
                     }
@@ -92,7 +92,7 @@ session_start();
                 }
                 else
                 {
-                    echo 'fichier trop volumineux';
+                    echo '<p class="msg">Fichier trop volumineux</p>';
                 }
             }
         
