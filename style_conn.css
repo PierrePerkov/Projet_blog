@@ -66,6 +66,7 @@ nav :hover
 .connection a
 {
     margin-right: 20px;
+    text-decoration: none;
 }
 
 .connection :hover
@@ -81,12 +82,6 @@ width: 40px;
 background-image: url('images/bouton_deco.png');
 background-repeat: no-repeat;
 background-position: center;
-
-}
-.connection :hover
-{
-    height: 42px;
-    width: 42px;
 }
 .titre_logo
 {
