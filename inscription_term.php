@@ -30,14 +30,14 @@
                 {
                     if($_POST['pwd_inscr'] === $_POST['pwd_verif'])
                     {    
-                        $req2 = $bdd->prepare('SELECT * FROM inscription WHERE pseudo = ? AND motdepasse = ? AND email = ?');
-                        $req2->execute(array($_POST['pseudo_inscr'],$_POST['pwd_inscr'],$_POST['email_inscr']));
+                        $req2 = $bdd->prepare('SELECT * FROM inscription WHERE pseudo = ? AND email = ?');
+                        $req2->execute(array($_POST['pseudo_inscr'],$_POST['email_inscr']));
                         $resultat = $req2->rowCount();
                             if($resultat == 0)
                             {
                                 ?>
                                 <h3>Felicitations!</h3>
-                                <p>Votre pseudo et votre mot de passe ont bien été crées. Vous pouvez maintenant vous connecter</p> 
+                                <p>Votre compte à bien été crée. Vous pouvez maintenant vous connecter</p> 
                                 <?php $req = $bdd->prepare('INSERT INTO inscription(pseudo, motdepasse, email,date_naissance)VALUES(:pseudo,:motdepasse,:email,:date_naissance)');
                                 $req->execute(array(
                                     'pseudo' => $pseudo,
@@ -47,13 +47,13 @@
                             }
                             elseif($resultat == 1)
                             {
-                                ?><p>Ce compte existe déjà</p><?php
+                                echo '<p class="msg">Pseudo ou mail déjà existant.</p>';
                             }
                     }
                     else       
                     {
                         
-                        ?><p>Les deux mots de passes sont differents</p>
+                        echo "<p class='msg'>Les deux mots de passes sont differents</p>";?>
                         <a href="page_inscriptions.php"><button></button></a><?php
                     }
                     
@@ -61,7 +61,7 @@
                 }
                 else
                 {
-                    ?><p>Les champs ne sont pas complétés</p>
+                    echo' <p>Les champs ne sont pas complétés</p>';?>
                     <a href="page_inscriptions.php"><button></button></a><?php
                 }
             }            
