@@ -156,6 +156,7 @@ body
     margin-left: 20px;
     height: fit-content;
     flex: 1;
+    position: relative;
 }
 .form_comm h2
 {
@@ -197,6 +198,13 @@ body
 {
     margin-left: 10px;
 }   
+.poster_commentaire
+{
+    border-radius: 6px;
+    background-color:hsl(202, 65%, 84%);
+    position: absolute;right: 5px;bottom:10px
+       
+}
 
 /* Formulaire d'inscription */
 
