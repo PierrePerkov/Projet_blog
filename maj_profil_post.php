@@ -25,14 +25,14 @@ if(isset($_POST['email']))
             }
             else
             {
-                echo 'vous avez entré la même adresse mail que celle déjà enregistrée.';
+                echo '<p class="msg">Vous avez entré la même adresse mail que celle déjà enregistrée.</p>';
                 
             }           
         }
         else
         {
             
-            echo 'Vous n\'avez pas entré de nouvelle adresse e-mail.';
+            echo '<p class="msg">Vous n\'avez pas entré de nouvelle adresse e-mail.</p>';
         }
     }
 // Changement de ville
@@ -56,7 +56,7 @@ elseif(isset($_POST['ville']))
     }
     else
     {
-        echo 'Vous n\'avez pas entré de nouvelle ville.';
+        echo '<p class="msg">Vous n\'avez pas entré de nouvelle ville.</p>';
     }
 }
 // changement de travail
@@ -80,7 +80,7 @@ elseif(isset($_POST['travail']))
     }
     else
     {
-        echo 'Vous n\'avez pas entré de nouveau travail.';
+        echo '<p class="msg">Vous n\'avez pas entré de nouveau travail.</p>';
     }
 }
 // changement de passions
@@ -105,6 +105,6 @@ elseif(isset($_POST['passions']))
     }
     else
     {
-        echo 'Vous n\'avez pas entré de nouvelle passions';
+        echo '<p class="msg">Vous n\'avez pas entré de nouvelle passions.</p>';
     }
 }
