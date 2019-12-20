@@ -9,7 +9,7 @@ session_start();
         <link rel="stylesheet" href="style_section.css">
     </head>
     <body>
-        
+        <div class="conteneur">
         <?php
         try{
             $bdd = new PDO('mysql:host=localhost;dbname=blog_projet;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO:: ERRMODE_EXCEPTION)); 
@@ -28,7 +28,7 @@ session_start();
             include('header.php');
         }
         ?>
-        <div class="conteneur">
+        
         <?php
             if(isset($_GET['id']))
             {
@@ -87,7 +87,7 @@ session_start();
                             </table>
                             <br>
                             <br>
-                            <input type="submit" name="envoi" value="poster mon commentaire">
+                            <input class="poster_commentaire" type="submit" name="envoi" value="poster mon commentaire">
                             <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
                         </form>  
                     </div>
