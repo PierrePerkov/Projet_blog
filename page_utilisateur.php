@@ -33,7 +33,7 @@ session_start();
             $req->execute(array($_SESSION['pseudo']));
             $resultat = $req->fetch();
             ?>
-            <img src="membres/avatar<?php echo $resultat['avatar'];?>" width="100px">
+            <img src="membres/avatars/<?php echo $resultat['avatar'];?>" width="100px">
             
             <table>
                 <tr></tr>
@@ -70,7 +70,7 @@ session_start();
                     $extensionsUpload = strtolower(substr(strchr($_FILES['avatar']['name'],'.'), 1));
                     if(in_array($extensionsUpload,$extensionsValides));
                     {
-                        $chemin = 'membres/avatar/'.$_SESSION['id'].'.'.$extensionsUpload;
+                        $chemin = 'membres/avatars/'.$_SESSION['id'].'.'.$extensionsUpload;
                         $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'],$chemin);
                         if($resultat)
                         {
