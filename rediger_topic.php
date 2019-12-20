@@ -6,9 +6,10 @@ session_start();
     <head>
         <meta charset="UTF-8">
         <title>Redaction topic</title>
-        <link rel="stylesheet" href="style_forum.css">
+        <link rel="stylesheet" href="style_section.css">
     </head>
     <body>
+        <div class="conteneur">
         <?php
         try{
             $bdd = new PDO('mysql:host=localhost;dbname=blog_projet;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO:: ERRMODE_EXCEPTION)); 
@@ -63,7 +64,8 @@ session_start();
             
 
             }
-            ?>          
+            ?>
+        </div>          
     </body>
 </html>
 
