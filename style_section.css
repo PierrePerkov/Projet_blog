@@ -29,9 +29,9 @@ body
 .rediger_topic button
 {
     border-radius: 8px;
-    position: absolute;left:105px;top:178px;
+    position: absolute;left:125px;top:178px;
     background-color: rgb(235, 185, 149);
-    font-size: 22px;
+    font-size: 20px;
     font-family:'kaushan_scriptregular';   
 }
 
