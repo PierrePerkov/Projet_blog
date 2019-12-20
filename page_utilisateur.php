@@ -40,26 +40,26 @@ session_start();
                 <tr></tr>
                 <td>Adresse email:</td>
                 <td><?php echo  $resultat['email'];?></td>
-                <td><form action="maj_profil.php" method ="POST"><button name="nv_email">Modifier</button></form></td>
+                <td><form  action="maj_profil.php" method ="POST"><button class="modif_button" name="nv_email">Modifier</button></form></td>
                 <tr></tr>
                 <td>Ville</td>
                 <td><?php echo $resultat['ville'];?></td>
-                <td><form action="maj_profil.php" method ="POST"><button name="nv_ville">Modifier</button></form></td>
+                <td><form  action="maj_profil.php" method ="POST"><button class="modif_button" name="nv_ville">Modifier</button></form></td>
                 <tr></tr>
                 <td>Travail</td>
                 <td><?php echo $resultat['travail'];?></td>
-                <td><form action="maj_profil.php" method ="POST"><button name="nv_travail">Modifier</button></form></td>
+                <td><form  action="maj_profil.php" method ="POST"><button class="modif_button" name="nv_travail">Modifier</button></form></td>
                 <tr></tr>
                 <td>Passions</td>
                 <td><?php echo $resultat['passions'];?></td>
-                <td><form action="maj_profil.php" method ="POST"><button name="nv_passions">Modifier</button></form></td>
+                <td><form  action="maj_profil.php" method ="POST"><button class="modif_button" name="nv_passions">Modifier</button></form></td>
             </table>
             <br>
             <br>
             <form action="" method="POST" enctype="multipart/form-data">
-                <label for="avatar">Avatar</label>
+                <label for="avatar">Avatar: </label>
                 <input type="file" name="avatar" id="avatar">
-                <input type="submit" value="valider">
+                <input class="valider_avatar" type="submit" value="valider">
             </form>
             <?php
             if(isset($_FILES['avatar']['name']) AND !empty($_FILES['avatar']['name']))
