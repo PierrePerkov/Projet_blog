@@ -57,7 +57,7 @@ session_start();
                     }
                     else
                     {
-                        echo 'Il manque le titre ou le contenu de votre article';
+                        echo '<p class="msg">Il manque le titre ou le contenu de votre article</p>';
                     }
                 }
             
