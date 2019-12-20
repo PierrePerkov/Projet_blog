@@ -24,7 +24,7 @@ session_start();
         {
             include('header_auth.php');?>
 
-            <h2><?php echo $_SESSION['pseudo'];?></h2>
+            <h2><?php echo ucfirst($_SESSION['pseudo']);?></h2>
             <p>Voici votre profil</p>
             
             <?php
@@ -70,7 +70,7 @@ session_start();
                     $extensionsUpload = strtolower(substr(strchr($_FILES['avatar']['name'],'.'), 1));
                     if(in_array($extensionsUpload,$extensionsValides));
                     {
-                        $chemin = 'membres/avatar'.$_SESSION['id'].'.'.$extensionsUpload;
+                        $chemin = 'membres/avatar/'.$_SESSION['id'].'.'.$extensionsUpload;
                         $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'],$chemin);
                         if($resultat)
                         {
@@ -87,15 +87,12 @@ session_start();
                     
                     }
                 
-                            
-                    
                 }
                 else
                 {
                     echo '<p class="msg">Fichier trop volumineux</p>';
                 }
-            }
-        
+            }       
 
 
         }
