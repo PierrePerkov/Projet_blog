@@ -9,17 +9,18 @@ session_start();
     <link rel="stylesheet" href="style_section.css">  
   </head>
   <body>
-  <?php
-  if(isset($_SESSION['pseudo']) AND isset($_SESSION['id']))
-  {
-    include("header_auth.php");  
-  }
-  else
-  {
-    include("header.php");  
-  }
-  ?>
     <div class="conteneur">
+      <?php
+      if(isset($_SESSION['pseudo']) AND isset($_SESSION['id']))
+      {
+        include("header_auth.php");  
+      }
+      else
+      {
+        include("header.php");  
+      }
+      ?>
+        
       <div class="msg">
         <p>Le site est en construction!</p>
         <p>Il y aura bientôt des articles sur cette page</p>
