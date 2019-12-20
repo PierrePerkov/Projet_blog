@@ -1,6 +1,4 @@
-<?php
-include('header.php');
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -9,7 +7,8 @@ include('header.php');
         <link rel="stylesheet" href="style_section.css">
     </head>
     <body>
-        <div class="conteneur">            
+        <div class="conteneur">
+            <?php include('header.php');?> 
             <p class="msg">Le site est en construction!</p>
             <p class="msg">Il y aura bientôt des articles sur cette page, vous pouvez vous rendre sur la page forum.</p>        
         </div> 
@@ -17,6 +16,8 @@ include('header.php');
 </html>
 
 
+           
+            
 
 
 
