@@ -17,7 +17,7 @@
                     </ul>
                 </nav>
                 <div class="connection">
-                    <p class="connecte">Bonjour <a href="page_utilisateur"><?php echo $_SESSION['pseudo'];?></a></p>               
+                    <p class="connecte">Bonjour <a href="page_utilisateur"><?php echo ucfirst($_SESSION['pseudo']);?></a></p>               
                     <a href="logout.php"><button name="sedeconnecter"></button></a>                    
                 </div>
             </div>    
