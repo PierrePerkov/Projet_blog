@@ -299,6 +299,18 @@ body
     border-radius: 6px;
     font-size: 18px;    
 }
+/* Page_utilisateur */
+
+.modif_button
+{
+    border-radius: 6px;
+    background-color:hsl(202, 65%, 84%);
+}
+.valider_avatar
+{
+    border-radius: 6px;
+    background-color:hsl(202, 65%, 84%);
+}
 /* Page contact */
 
 .contact_mail
