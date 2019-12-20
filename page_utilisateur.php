@@ -9,6 +9,7 @@ session_start();
         <link rel="stylesheet" href="style_section.css">
     </head>
     <body>
+        <div class="conteneur">
         <?php
         try
         {
@@ -101,7 +102,6 @@ session_start();
             include('header.php');
         }
         ?>
-        <div class="conteneur">
         </div>
     </body>
 </html>
