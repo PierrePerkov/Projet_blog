@@ -9,9 +9,9 @@ session_start();
           <link rel="stylesheet" href="style_section.css">
         </head>
         <body>
-          <div class="conteneur">
+          <div class="container">
             <?php
-            if(isset($_SESSION['pseudo']) AND isset($_SESSION['id']))
+            if(isset($_SESSION['login']) AND isset($_SESSION['id']))
             {  
             include('header_auth.php');
             }else
