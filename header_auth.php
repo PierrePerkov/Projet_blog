@@ -11,18 +11,18 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <a href = "page_membre.php"><li>ACCUEIL</li></a>
+                        <a href = "member_area.php"><li>ACCUEIL</li></a>
                         <a href = "forum.php"><li>FORUM</li></a>
                         <a href="contact.php"><li>CONTACT</li></a>           
                     </ul>
                 </nav>
                 <div class="connection">
-                    <p class="connecte">Bonjour <a href="page_utilisateur"><?php echo ucfirst($_SESSION['pseudo']);?></a></p>               
-                    <a href="logout.php"><button name="sedeconnecter"></button></a>                    
+                    <p class="loged">Bonjour <a href="user_profile.php"><?php echo ucfirst($_SESSION['login']);?></a></p>               
+                    <a href="logout.php"><button name="logout"></button></a>                    
                 </div>
             </div>    
-                <div class="titre_logo">
-                    <img src="images/logo_titre.png" alt="logo image">
+                <div class="title_logo">
+                    <img src="pictures/logo_title.png" alt="logo">
                     <h1>Le blog de l'express</h1>
                 </div>       
         </header>
