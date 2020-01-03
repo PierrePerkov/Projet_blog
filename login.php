@@ -12,7 +12,7 @@ session_start();
         <?php 
         include('header.php');
         ?>
-        <div class="conteneur">
+        <div class="container">
             <?php
             try
             {
@@ -23,18 +23,18 @@ session_start();
             }
 
 
-            if(isset($_POST['pseudo']) AND isset($_POST['motdepasse']))
-            {   $pseudo = htmlspecialchars($_POST['pseudo']);
-                $motdepasse = htmlspecialchars($_POST['motdepasse']);
-                if(!empty($pseudo) AND !empty($motdepasse))
+            if(isset($_POST['login']) AND isset($_POST['pass']))
+            {   $login = htmlspecialchars($_POST['login']);
+                $pass = htmlspecialchars($_POST['pass']);
+                if(!empty($login) AND !empty($pass))
                 {   
 
-                    $req = $bdd->prepare('SELECT motdepasse,id FROM inscription WHERE pseudo = ?');
-                    $req->execute(array($pseudo));
-                    $resultat2 = $req->fetch();
-                    $user_exist = password_verify($motdepasse,$resultat2['motdepasse']);
+                    $req = $bdd->prepare('SELECT pass,id FROM registration WHERE login = ?');
+                    $req->execute(array($login));
+                    $results = $req->fetch();
+                    $user_exist = password_verify($pass,$results['pass']);
 
-                    if(!$resultat2)
+                    if(!$results)
                     {   
                         ?>
                         <div class="msg_err">
@@ -47,9 +47,9 @@ session_start();
                         if($user_exist)
                         {
                             session_start();
-                            $_SESSION['pseudo'] = $pseudo;
-                            $_SESSION['id'] = $resultat2['id'];
-                            header('Location:page_membre.php');
+                            $_SESSION['login'] = $login;
+                            $_SESSION['id'] = $results['id'];
+                            header('Location:member_area.php');
                         }
                         else
                         {   
@@ -69,12 +69,7 @@ session_start();
                     </div>
                     <?php  
                 }
-            }?>
-            
-            
+            }?>                       
         </div> 
-
-
-
     </body>
 </html>
