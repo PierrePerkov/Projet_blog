@@ -10,7 +10,7 @@ session_start();
           <link rel="stylesheet" href="style_section.css">
         </head>
         <body>
-          <div class="conteneur">
+          <div class="container">
           <?php
           try{
               $bdd = new PDO('mysql:host=localhost;dbname=blog_projet;charset=utf8','root','',array(PDO::ATTR_ERRMODE => PDO:: ERRMODE_EXCEPTION)); 
@@ -19,11 +19,11 @@ session_start();
           {
               die('erreur : '.$e->getMessage());
           }
-          if(isset($_SESSION['pseudo']) AND isset($_SESSION['id']))
+          if(isset($_SESSION['login']) AND isset($_SESSION['id']))
           {  
             include('header_auth.php');?>
-            <div class="rediger_topic">
-              <a href="rediger_topic.php"><button>Rediger un article</button></a>
+            <div class="write_topic">
+              <a href="write_topic.php"><button>Rediger un topic</button></a>
             </div>           
             
             <?php 
@@ -32,26 +32,28 @@ session_start();
           {
             include('header.php');  
           }
-          // Affichage des differents topics
-            $rep = $bdd->query('SELECT id,titre,contenu,pseudo,DATE_FORMAT(date_crea, "%d %m %Y à %Hh %mm %ss") as date_fr FROM topics');
-            while($resultat = $rep->fetch())
+
+          
+
+          // Display different topics
+            $response = $bdd->query('SELECT id,title,contents,login,DATE_FORMAT(creation_date, "%d %m %Y à %Hh %mm %ss") as date_fr FROM topics ORDER BY id DESC');
+            while($results = $response->fetch())
             {?>
               
             <div class="topic">
-              <div class="titre_topic">
-                <h3><a href="commentaire.php?id=<?php echo $resultat['id'];?>"><?php echo $resultat['titre'];?></a></h3>
+              <div class="title_topic">
+                <h3><a href="comments.php?id=<?php echo $results['id'];?>"><?php echo $results['title'];?></a></h3>
               </div>  
-                <p class="titre_topic_p">Ecrit par: <?php echo $resultat['pseudo'];?></p>             
-              <div class="contenu_topic">
-                <p><?php echo substr($resultat['contenu'],0,300);?></p>
-                <p><?php echo $resultat['date_fr'];?></p>
-              </div>
-              
+                <p class="title_topic_p">Ecrit par: <?php echo $results['login'];?></p>             
+              <div class="contents_topic">
+                <p><?php echo substr($results['contents'],0,300);?></p>
+                <p><?php echo $results['date_fr'];?></p>
+              </div>              
             </div>
-            <?php 
-            }        
+            <?php
+            $response->closeCursor(); 
+            }
             ?>
-
           </div>    
         </body>
       </html>
