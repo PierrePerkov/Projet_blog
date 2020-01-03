@@ -1,20 +1,18 @@
 @font-face {
     font-family: 'kaushan_scriptregular';
-    src: url('polices/menu/kaushanscript-regular-webfont.woff2') format('woff2'),
-         url('polices/menu/kaushanscript-regular-webfont.woff') format('woff');
+    src: url('fonts/menu/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('fonts/menu/kaushanscript-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'amaticbold';
-    src: url('polices/titre_principal/amatic-bold-webfont.woff2') format('woff2'),
-         url('polices/titre_principal/amatic-bold-webfont.woff') format('woff');
+    src: url('fonts/main_title/amatic-bold-webfont.woff2') format('woff2'),
+         url('fonts/main_title/amatic-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
-
 
 /* Page d'accueil */
 .menu
@@ -79,11 +77,11 @@ nav :hover
 border-radius: 50%;
 height: 40px;
 width: 40px;
-background-image: url('images/bouton_deco.png');
+background-image: url('pictures/logout_button.png');
 background-repeat: no-repeat;
 background-position: center;
 }
-.titre_logo
+.title_logo
 {
     display: flex;
     justify-content: center;
@@ -93,11 +91,11 @@ background-position: center;
     background-color: hsl(202, 65%, 84%);
     border-radius: 15px;
 }
-.titre_logo img
+.title_logo img
 {
     width: 150px;
 }
-.titre_logo h1
+.title_logo h1
 {
 font-family: 'amaticbold';
 font-size: 80px;
