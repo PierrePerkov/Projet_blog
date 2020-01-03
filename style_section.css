@@ -19,14 +19,14 @@ body
 {
     background-color: rgb(241, 206, 163);
 }
-.conteneur
+.container
 {
     width: 1300px;
     margin: auto;
     
 }
 /* Page forum.php */
-.rediger_topic button
+.write_topic button
 {
     border-radius: 8px;
     position: absolute;left:125px;top:178px;
@@ -43,27 +43,27 @@ body
     margin-top:2%;
     margin-bottom: 5px
 }
-.titre_topic h3
+.title_topic h3
 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 10px;
 }
-.titre_topic a
+.title_topic a
 {
      text-decoration: none;
      color: rgb(53, 101, 131);
 }
-.titre_topic :hover
+.title_topic :hover
 {
     color: chocolate;
 }
-.titre_topic
+.title_topic
 {
     font-style: italic;
     text-decoration: none;
 }
-.titre_topic h3
+.title_topic h3
 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,16 +71,16 @@ body
     color: rgb(53, 101, 131);
     margin-bottom: 1px;
 }
-.titre_topic_paragraphe
+.title_topic_paragraphe
 {
     margin-left: 10px;
     
 }
-.titre_topic_p
+.title_topic_p
 {
     margin-left: 10px;
 }
-.contenu_topic
+.contents_topic
 {
     margin-left: 10px;
 }
@@ -132,14 +132,14 @@ body
     margin-top:2%;
     margin-bottom: 5px
 }
-.espace_comm
+.comments_space
 {
     
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-.titre_topic_post
+.title_topic_post
 {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
@@ -171,34 +171,34 @@ body
     font-family: 'kaushan_scriptregular';
     font-size: 18px;
 }
-.titre_comm
+.title_comm
 {
     padding-left: 5px;
     font-size: 18px;
 }
-.contenu_comm p
+.contents_comm p
 {
     padding-left: 15px;
 }
-.commentaires_conteneur
+.comments_container
 {
     
     display: flex;
     flex-direction: column;
     flex: 2;
 }
-.commentaire
+.comments
 {
     border-radius: 8px;        
     margin-bottom: 10px;
     background-color:whitesmoke;
     box-shadow: black 1px 1px 10px;      
 }  
-.commentaire h3
+.comments h3
 {
     margin-left: 10px;
 }   
-.poster_commentaire
+.post_comment
 {
     border-radius: 6px;
     background-color:hsl(202, 65%, 84%);
@@ -208,13 +208,13 @@ body
 
 /* Formulaire d'inscription */
 
-.fenetre_inscription
+.registration_window
 {
     border-radius: 8px ;
     margin-top: 30px;    
     height: auto;
 }
-.fenetre_inscription h2
+.registration_window h2
 {
     font-size: 40px;
     font-family: 'kaushan_scriptregular';
@@ -222,38 +222,38 @@ body
     text-decoration: underline;
     padding-left: 20px;
 }
-.fenetre_inscription p
+.registration_window p
 {
     font-size: 20px;
     padding-left: 20px;
     font-style: italic;
 }
-.fenetre_inscription form
+.registration_window form
 {
     padding-left: 20px; 
 }
-.fenetre_inscription label
+.registration_window label
 {
     font-family: 'kaushan_scriptregular';
     font-size: 20px;
 }
-.fenetre_inscription input
+.registration_window input
 {
     border-radius: 6px;
 }
-.fenetre_inscription button
+.registration_window button
 {
     border-radius: 6px;
     background-color:hsl(202, 65%, 84%);  
 }
 /* Formulaire d'inscription $_POST */
-.formulaire_envoi
+.form_sent
 {    
     border-radius: 8px ;
     margin-top: 30px;
     height: 170px; 
 }
-.formulaire_envoi h3
+.form_sent h3
 {
     font-size: 25px;
     font-family: 'kaushan_scriptregular';
@@ -262,13 +262,13 @@ body
     padding-left: 20px;
 }
 
-.formulaire_envoi p
+.form_sent p
 {
     font-size: 20px;
     padding-left: 20px;
     font-style: italic;
 }
-.formulaire_envoi button
+.form_sent button
 {
  width: 40px;
  height: 40px;
